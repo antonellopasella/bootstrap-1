@@ -65,16 +65,16 @@ function($q ,  $timeout ,  $rootScope ,  $log ,  $transitionSuppressDeprecated) 
   // Work out the name of the transitionEnd event
   var transElement = document.createElement('trans');
   var transitionEndEventNames = {
+    'transition': 'transitionend',
     'WebkitTransition': 'webkitTransitionEnd',
     'MozTransition': 'transitionend',
-    'OTransition': 'oTransitionEnd',
-    'transition': 'transitionend'
+    'OTransition': 'oTransitionEnd'
   };
   var animationEndEventNames = {
+    'transition': 'animationend',
     'WebkitTransition': 'webkitAnimationEnd',
     'MozTransition': 'animationend',
     'OTransition': 'oAnimationEnd',
-    'transition': 'animationend'
   };
   function findEndEventName(endEventNames) {
     for (var name in endEventNames){
